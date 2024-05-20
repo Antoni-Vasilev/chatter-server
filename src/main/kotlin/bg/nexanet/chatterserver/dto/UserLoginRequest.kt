@@ -14,5 +14,4 @@ class UserLoginRequest(
     val deviceId: String,
     val deviceName: String,
     val notificationToken: String
-) {
-}
+)

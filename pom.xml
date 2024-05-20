@@ -10,7 +10,7 @@
     </parent>
     <groupId>bg.nexanet</groupId>
     <artifactId>chatter-server</artifactId>
-    <version>2024.05.20+1</version>
+    <version>2024.05.20+2</version>
     <name>chatter-server</name>
     <description>chatter-server</description>
     <properties>
