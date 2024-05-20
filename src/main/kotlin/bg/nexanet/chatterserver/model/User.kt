@@ -34,6 +34,13 @@ data class User(
     var createDate: Date,
     var lastOnline: Date?,
 
+    @ManyToMany
+    var roles: List<Role>,
+
+    @ManyToMany
+    var devices: List<Device>,
+    var emailValidate: Boolean,
+
     @Email
     @NotNull
     @Column(nullable = false, unique = true)

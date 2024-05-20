@@ -19,4 +19,16 @@ class GlobalExceptionHandler {
         val message = MessageException(e.message.toString())
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message)
     }
+
+    @ExceptionHandler(NotFoundException::class)
+    fun handleNotFoundException(e: NotFoundException): ResponseEntity<MessageException> {
+        val message = MessageException(e.message.toString())
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message)
+    }
+
+    @ExceptionHandler(UnauthorizedException::class)
+    fun handleUnauthorizedException(e: UnauthorizedException): ResponseEntity<MessageException> {
+        val message = MessageException(e.message.toString())
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(message)
+    }
 }
