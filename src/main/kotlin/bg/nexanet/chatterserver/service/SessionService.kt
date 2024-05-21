@@ -9,4 +9,5 @@ interface SessionService {
     fun refresh(sessionId: String)
     fun renew(sessionId: String, deviceId: String): String
     fun findSessionsByUser(user: User): List<Session>
+    fun logout(sessionId: String)
 }

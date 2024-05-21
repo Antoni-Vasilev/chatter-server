@@ -37,11 +37,17 @@ class AuthController(
     @PostMapping("/refresh")
     fun refresh(@RequestParam sessionId: String): ResponseEntity<MessageResponse> {
         sessionService.refresh(sessionId)
-        return ResponseEntity.ok(MessageResponse(true.toString()))
+        return ResponseEntity.ok(MessageResponse("Session is valid"))
     }
 
     @PostMapping("/renew")
     fun renew(@RequestParam sessionId: String, @RequestParam deviceId: String): ResponseEntity<MessageResponse> {
         return ResponseEntity.ok(MessageResponse(sessionService.renew(sessionId, deviceId)))
+    }
+
+    @PostMapping("/logout")
+    fun logout(@RequestParam sessionId: String): ResponseEntity<MessageResponse> {
+        sessionService.logout(sessionId)
+        return ResponseEntity.ok(MessageResponse("Session is logged out"))
     }
 }

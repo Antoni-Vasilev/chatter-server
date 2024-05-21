@@ -20,7 +20,7 @@ class Session(
 
     val startDate: Date,
     val endDate: Date,
-    val isValid: Boolean,
+    var isValid: Boolean,
 
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")

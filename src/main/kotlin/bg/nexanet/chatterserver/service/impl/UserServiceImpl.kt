@@ -54,7 +54,13 @@ class UserServiceImpl(
                 userLoginRequest.notificationToken
             )
 
-        findUser.devices += findDevice
+        var isContain = false
+        for (device in findUser.devices) if (device.id == findDevice.id) {
+            isContain = true
+            break
+        }
+        if (!isContain) findUser.devices += findDevice
+        findUser.lastOnline = Date()
         userRepository.save(findUser)
 
         val today = Date()
