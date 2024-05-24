@@ -33,6 +33,7 @@ data class User(
     @Column(nullable = false)
     var createDate: Date,
     var lastOnline: Date?,
+    var profileImageLastChange: Date?,
 
     @ManyToMany
     var roles: List<Role>,

@@ -10,7 +10,7 @@
     </parent>
     <groupId>bg.nexanet</groupId>
     <artifactId>chatter-server</artifactId>
-    <version>2024.05.21+1</version>
+    <version>2024.05.25+1</version>
     <name>chatter-server</name>
     <description>chatter-server</description>
     <properties>
@@ -68,6 +68,11 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+            <version>3.1.5</version>
         </dependency>
     </dependencies>
 

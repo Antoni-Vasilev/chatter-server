@@ -11,6 +11,7 @@ data class UserSessionData(
     var lastName: String,
     var createDate: Date,
     var lastOnline: Date,
+    var lastProfileImageUpdate: Date?,
     var roles: List<Role>,
     var devices: List<Device>,
     var emailValidate: Boolean,

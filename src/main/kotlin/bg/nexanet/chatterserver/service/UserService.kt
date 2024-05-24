@@ -1,11 +1,12 @@
 package bg.nexanet.chatterserver.service
 
-import bg.nexanet.chatterserver.dto.UserLoginRequest
-import bg.nexanet.chatterserver.dto.UserRegisterRequest
+import bg.nexanet.chatterserver.model.User
 
 interface UserService {
 
-    fun register(userRegisterRequest: UserRegisterRequest)
+    fun findUserByEmail(email: String): User?
 
-    fun login(userLoginRequest: UserLoginRequest): String
+    fun generateUsername(fullName: String): String
+
+    fun save(user: User): User
 }
